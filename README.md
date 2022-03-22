@@ -4,6 +4,8 @@ The project readmes should reflect the current status of the project. The main p
 
 ## suggested project folder structure:
 
+TODO.md -> most important
+
 README.project → most important
 
 README.scripts → most important 
@@ -28,8 +30,12 @@ After this section dependencies must be listed, it does not have to be in commen
 The data analysis project might depend on a python or R package you developed but they have different conventions to follow. For those sub-projects follow the conventions with reproducibility and usability in mind.
 
 
+## What goes in TODO.md
+This contains checklists for tasks, and who is responsible of doing them. These tasks are usually decided jointly in meetings, can be updated by individuals. 
 
 ## What goes in README.project ?
+This is the basic information about your project. Looking at this a newcomer should be able to understand what you are doing and what is the status. 
+
 ```
 ---
 Goals: What is the goal(s) of the project? What is this project trying to do? A newcomer has to understand what you wrote here.
@@ -37,21 +43,24 @@ Goals: What is the goal(s) of the project? What is this project trying to do? A 
 Current status: What is the current status. What is achieved? what is not still working. try to keep it to 3-4 sentences. A newcomer has to understand what you wrote here.
 
 presentations:google drive or dropbox-alike link or multiple links or locations of presentations on our servers
+   presentation1: initial results and QC for raw data. link
+   presentation2: Intermediate results, clustering for samples, initial regression models for x,y,z
+   presentation3: Presentation that has the story flow and figures of the paper
 
 failed ideas: link to presentation or document where you collect the failed ideas. Failed ideas are avenues/paths you stopped pursuing because it didn’t work. There is usually a figure or a table showing that the idea is failed. Paste that figure/table to the document (google doc or slides). This is very important to keep track number of failed ideas are our KPI. Also we don’t retry them.
 
 draft paper: googledocs link to draft paper. Provide a link or write: no link yet. if there is no link
 
-prerequisite_reading:  which previously published papers are relevant for this project? Do not list more than 5.
+prerequisite reading:  which previously published papers are relevant for this project? Do not list more than 5.
+   reading1: This paper deals with x,y,z. We have a similar approach here. link to paper
+   reading2: This paper deals with x cells. We also work on x cells for this project. link to paper
 
-paper1: This paper deals with x,y,z. We have a similar approach here. link to paper
+prerequisite skills: What a newcomer needs to know to replicate what you have done and improve it? Does s/he need to know R, python, snakeMake, any particular packages? 
 
-paper2: This paper deals with x cells. We also work on x cells for this project. link to paper
-
-prerequisite_skills: What a newcomer needs to know to replicate what you have done and improve it? Does s/he need to know R, python, snakeMake, any particular packages? 
 ```
 
 ## What goes in README.scripts ?
+__README.scripts__ contains which scripts are produced and what function/goal do they achieve in the project. The current workflow section has the ordered list of scripts that has to be run sequentially in order to achieve the current state of the project. The state of the project is defined by which figures and tables are needed to show the status of the project. 
 
 ```
 ----
@@ -60,17 +69,22 @@ current workflow: describe the sequential workflow of scripts to achieve the cur
    callMeth.R: This script calls methylation and saves it RDS files
    cluster.R: This script clusters samples based on methylation and produces heatmaps 
 
-Other scripts: Other scripts that are not part of the current workflow and describe wgat 
+Other scripts: Other scripts that are not part of the current workflow and they are produced for tasks that are not needed anymore or checked but wasn't interesting to follow up.
+   rawReads.R: checking read length distribution, it is not used in the paper. we thought there was something wrong with reads, there wasn't. 
+   deepLearn.py: deepLearn the methytlation patterns, this didn't work because there wasn't enough data. We settled sth simpler later in. xyz script has the replacement approach.
 
 ```
+
 ## What goes in README.data ?
+This readme introduces the reader where the data files are and any convention that we can glean from their naming. 
+Again, a newcomer could see where your data is and what naming conventions you are using to figure out where the relevant data is.
 
-     raw_data: where is raw data give location on /data. These are raw fastq files usually 
-
-    naming_convention: is there a naming convention on these files. Like pre-defined prefix or suffix that can give us clues?
-
-     processed_data: where is processed data? These are usually bam or VCF files, or methylation call files, bigwig 
-
-    naming_convention: is there a naming convention on these files. Like pre-defined prefix or suffix that can give us clues?
-
-   tertiary_data: where is the data your scripts produced mostly like using processed_data. These are intermediate or final tables that are used in subsequent analysis
+```
+---
+raw_data: where is raw data give location on /data. These are raw fastq files usually. What is in your raw_data folder
+   naming_convention: is there a naming convention on these files, like pre-defined prefix or suffix that can give us clues?
+processed_data: where is processed data? These are usually bam or VCF files, or methylation call files, bigwig. What is in your raw_data folder, describe
+   naming_convention: is there a naming convention on these files, like pre-defined prefix or suffix that can give us clues?
+tertiary_data: where is the data your scripts produced using processed_data or raw_data. These are intermediate or final tables that are used in subsequent analysis or as supplementary material. Describe in one short sentence what type of files are these.
+   naming_convention: is there a naming convention on these files, like pre-defined prefix or suffix that can give us clues?
+```
