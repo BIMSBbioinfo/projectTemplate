@@ -29,9 +29,19 @@ After this section dependencies must be listed, it does not have to be in commen
 
 The data analysis project might depend on a python or R package you developed but they have different conventions to follow. For those sub-projects follow the conventions with reproducibility and usability in mind.
 
+## When to update the READMEs?
+Any major milestone is an opportunity to update the READMEs. Milestones are presentations, papers, progress meetings. Bi-yearly lab clean up meetings are also the time to keep these READMEs up-to-date. 
 
-## What goes in TODO.md
-This contains checklists for tasks, and who is responsible of doing them. These tasks are usually decided jointly in meetings, can be updated by individuals. 
+## What goes in TODO.md ?
+This contains checklists for tasks, and who is responsible of doing them. These tasks are usually decided jointly in meetings, can be updated by individuals. The tasks has to be coded in urgency, importance and effort as high or low. Individual tasks that probably introduced after the meeting has to be marked. Example:
+
+- [ ] Mercury (U:hi, I:hi, E: hi)
+   - [x] Venus (U:hi, I:hi, E: lo)
+   - [x] Earth (Orbit/Moon) (U:hi, I:hi, E: lo)
+   - [] Mars (U:lo, I:hi, E: lo)
+       - [x] Mars
+- [ ] Jupiter (U:lo, I:lo, E: lo)
+- [ ] Comet Haley (U:lo, I:lo, E: hi)
 
 ## What goes in README.project ?
 This is the basic information about your project. Looking at this a newcomer should be able to understand what you are doing and what is the status. 
@@ -40,14 +50,19 @@ This is the basic information about your project. Looking at this a newcomer sho
 ---
 Goals: What is the goal(s) of the project? What is this project trying to do? A newcomer has to understand what you wrote here.
 
-Current status: What is the current status. What is achieved? what is not still working. try to keep it to 3-4 sentences. A newcomer has to understand what you wrote here.
+Current status: What is the current status. What is achieved? what is not still working. 
+                try to keep it to 3-4 sentences. A newcomer has to understand what you wrote here.
 
 presentations:google drive or dropbox-alike link or multiple links or locations of presentations on our servers
    presentation1: initial results and QC for raw data. link
    presentation2: Intermediate results, clustering for samples, initial regression models for x,y,z
    presentation3: Presentation that has the story flow and figures of the paper
 
-failed ideas: link to presentation or document where you collect the failed ideas. Failed ideas are avenues/paths you stopped pursuing because it didn’t work. There is usually a figure or a table showing that the idea is failed. Paste that figure/table to the document (google doc or slides). This is very important to keep track number of failed ideas are our KPI. Also we don’t retry them.
+failed ideas: link to presentation or document where you collect the failed ideas.
+               Failed ideas are avenues/paths you stopped pursuing because it didn’t work. 
+               There is usually a figure or a table showing that the idea is failed. 
+               Paste that figure/table to the document (google doc or slides). 
+               This is very important to keep track number of failed ideas are our KPI. Also we don’t retry them this way.
 
 draft paper: googledocs link to draft paper. Provide a link or write: no link yet. if there is no link
 
@@ -55,7 +70,8 @@ prerequisite reading:  which previously published papers are relevant for this p
    reading1: This paper deals with x,y,z. We have a similar approach here. link to paper
    reading2: This paper deals with x cells. We also work on x cells for this project. link to paper
 
-prerequisite skills: What a newcomer needs to know to replicate what you have done and improve it? Does s/he need to know R, python, snakeMake, any particular packages? 
+prerequisite skills: What a newcomer needs to know to replicate what you have done and improve it? 
+                     Does s/he need to know R, python, snakeMake, any particular packages? 
 
 ```
 
