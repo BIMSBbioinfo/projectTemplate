@@ -1,0 +1,13 @@
+----
+current workflow: describe the sequential workflow of scripts to achieve the current state of the project. 
+                  Current state is defined by results which are usually tables and figures. 
+   exampleScript.sh: This script aligns the reads
+   callMeth.R: This script calls methylation and saves it RDS files
+   cluster.R: This script clusters samples based on methylation and produces heatmaps 
+
+Other scripts: Other scripts that are not part of the current workflow and they are produced for tasks that are not needed anymore 
+              or checked but wasn't interesting to follow up.
+   rawReads.R: checking read length distribution, it is not used in the paper. we thought there was something wrong with reads, there wasn't. 
+   deepLearn.py: deepLearn the methytlation patterns, this didn't work because there wasn't enough data. We settled sth simpler later in.
+                 xyz script has the replacement approach.
+
