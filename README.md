@@ -41,7 +41,7 @@ This contains checklists for tasks, and who is responsible of doing them. These 
    - [ ] feature importance plots (Ahmet)(U:lo, I:hi, E: lo)
        - [x] run feature importance
 - [ ] Do this (U:lo, I:lo, E: lo)
-- [ ]Do that (U:lo, I:lo, E: hi)
+- [ ] Do that (U:lo, I:lo, E: hi)
 
 ## What goes in README.project ?
 This is the basic information about your project. Looking at this a newcomer should be able to understand what you are doing and what is the status. 
@@ -54,8 +54,8 @@ Current status: What is the current status. What is achieved? what is not still 
                 try to keep it to 3-4 sentences. A newcomer has to understand what you wrote here.
 
 Roles: Who is involved in this project ?
-   main driver: Who is doing the bulk of the work
-   support work: Who is helping out with ideas, scripts, know-how
+   main driver: Who is doing the bulk of the analysis work. Writing code, processing data?
+   support work: Who is helping out with ideas, pre-made scripts, know-how or small custom analysis?
    supervision: Who is doing the project management and has the birds-eye view
 
 presentations:google drive or dropbox-alike link or multiple links or locations of presentations on our servers
@@ -85,12 +85,12 @@ __README.scripts__ contains which scripts are produced and what function/goal do
 
 ```
 ----
-current workflow: describe the sequential workflow of scripts to achieve the current state of the project. Current state is defined by results which are usually tables and figures. 
+current workflow: describe the sequential workflow of scripts to achieve the current state of the project. Current state is defined by results, which are usually tables and figures. 
    exampleScript.sh: This script aligns the reads
    callMeth.R: This script calls methylation and saves it RDS files
    cluster.R: This script clusters samples based on methylation and produces heatmaps 
 
-Other scripts: Other scripts that are not part of the current workflow and they are produced for tasks that are not needed anymore or checked but wasn't interesting to follow up.
+Other scripts: Other scripts that are not part of the current workflow and they are produced for tasks that are not needed anymore or checked but wasn't interesting to follow up. Or if the workflow is orchestrated by a single script than every other script has to be documented here.
    rawReads.R: checking read length distribution, it is not used in the paper. we thought there was something wrong with reads, there wasn't. 
    deepLearn.py: deepLearn the methytlation patterns, this didn't work because there wasn't enough data. We settled sth simpler later in. xyz script has the replacement approach.
 
