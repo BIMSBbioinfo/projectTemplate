@@ -35,13 +35,13 @@ Any major milestone is an opportunity to update the READMEs. Milestones are pres
 ## What goes in TODO.md ?
 This contains checklists for tasks, and who is responsible of doing them. These tasks are usually decided jointly in meetings, can be updated by individuals. The tasks has to be coded in urgency, importance and effort as high or low. Individual tasks that probably introduced after the meeting has to be marked. Example:
 
-- [ ] Mercury (U:hi, I:hi, E: hi)
-   - [x] Venus (U:hi, I:hi, E: lo)
-   - [x] Earth (Orbit/Moon) (U:hi, I:hi, E: lo)
-   - [] Mars (U:lo, I:hi, E: lo)
-       - [x] Mars
-- [ ] Jupiter (U:lo, I:lo, E: lo)
-- [ ] Comet Haley (U:lo, I:lo, E: hi)
+- [ ] Make the plots for the paper (U:hi, I:hi, E: hi)
+   - [x] clustering plot (Ahmet) (U:hi, I:hi, E: lo)
+   - [x] heatmaps (Elodie) (U:hi, I:hi, E: lo)
+   - [ ] feature importance plots (Ahmet)(U:lo, I:hi, E: lo)
+       - [x] run feature importance
+- [ ] Do this (U:lo, I:lo, E: lo)
+- [ ]Do that (U:lo, I:lo, E: hi)
 
 ## What goes in README.project ?
 This is the basic information about your project. Looking at this a newcomer should be able to understand what you are doing and what is the status. 
@@ -52,6 +52,11 @@ Goals: What is the goal(s) of the project? What is this project trying to do? A 
 
 Current status: What is the current status. What is achieved? what is not still working. 
                 try to keep it to 3-4 sentences. A newcomer has to understand what you wrote here.
+
+Roles: Who is involved in this project ?
+   main driver: Who is doing the bulk of the work
+   support work: Who is helping out with ideas, scripts, know-how
+   supervision: Who is doing the project management and has the birds-eye view
 
 presentations:google drive or dropbox-alike link or multiple links or locations of presentations on our servers
    presentation1: initial results and QC for raw data. link
