@@ -1,0 +1,10 @@
+---
+raw_data: where is raw data give location on /data. These are raw fastq files usually. What is in your raw_data folder
+   naming_convention: is there a naming convention on these files, like pre-defined prefix or suffix that can give us clues?
+processed_data: where is processed data? These are usually bam or VCF files, or methylation call files, bigwig. 
+                What is in your raw_data folder, describe
+   naming_convention: is there a naming convention on these files, like pre-defined prefix or suffix that can give us clues?
+tertiary_data: where is the data your scripts produced using processed_data or raw_data. 
+             These are intermediate or final tables that are used in subsequent analysis or as supplementary material.
+             Describe in one short sentence what type of files are these.
+   naming_convention: is there a naming convention on these files, like pre-defined prefix or suffix that can give us clues?
