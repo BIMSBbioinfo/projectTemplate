@@ -4,23 +4,23 @@ The project readmes should reflect the current status of the project. The main p
 
 ## suggested project folder structure:
 
-TODO.md -> most important
+__TODO.md__ -> most important
 
-README.project → most important
+__README.project__ → most important
 
-README.scripts → most important 
+__README.scripts__ → most important 
 
-README.data → most important 
+__README.data__ → most important 
 
-data/ → can have other subfolders or linked data, [README.data](http://README.data) will be our guide to this folder
+__data/__ → can have other subfolders or linked data, README.data will be our guide to this folder
 
-scripts/ → can have other subfolders README.scripts will be our guide to this folder
+__scripts/__ → can have other subfolders README.scripts will be our guide to this folder
 
-docs/ → (optional) any text document or reports that do not fit elsewhere goes here
+__docs/__ → (optional) any text document or reports that do not fit elsewhere goes here
 
-presentations/  → (optional) any presentation done internally or externally should be here.
+__presentations/__  → (optional) any presentation done internally or externally should be here.
 
-any_other_folder/  → (optional) any other folder that is needed for the organization of the project
+__any_other_folder/__  → (optional) any other folder that is needed for the organization of the project
 
 ## Coding conventions:
 Workhorse of data analysis projects are scripts/notebooks. On the top of the script, start with goal of the script. What is this script doing? then provide Input/output summary. What data does the script take in and what it outputs. While this might be changing dynamically during the project. It is essential this part is kept up-to-date as much as possible. Especially when a script is producing essential plots or tables that will be needed for the publication or report. 
@@ -85,14 +85,19 @@ __README.scripts__ contains which scripts are produced and what function/goal do
 
 ```
 ----
-current workflow: describe the sequential workflow of scripts to achieve the current state of the project. Current state is defined by results, which are usually tables and figures. 
+current workflow: describe the sequential workflow of scripts to achieve the current state of the project.
+                  Current state is defined by results, which are usually tables and figures. 
    exampleScript.sh: This script aligns the reads
    callMeth.R: This script calls methylation and saves it RDS files
    cluster.R: This script clusters samples based on methylation and produces heatmaps 
 
-Other scripts: Other scripts that are not part of the current workflow and they are produced for tasks that are not needed anymore or checked but wasn't interesting to follow up. Or if the workflow is orchestrated by a single script than every other script has to be documented here.
-   rawReads.R: checking read length distribution, it is not used in the paper. we thought there was something wrong with reads, there wasn't. 
-   deepLearn.py: deepLearn the methytlation patterns, this didn't work because there wasn't enough data. We settled sth simpler later in. xyz script has the replacement approach.
+Other scripts: Other scripts that are not part of the current workflow and they are 
+               produced for tasks that are not needed anymore or checked but wasn't interesting to follow up. 
+               Or if the workflow is orchestrated by a single script than every other script has to be documented here.
+   rawReads.R: checking read length distribution, it is not used in the paper. 
+               we thought there was something wrong with reads, there wasn't. 
+   deepLearn.py: deepLearn the methytlation patterns, this didn't work because there wasn't enough data.
+               We settled sth simpler later in. xyz script has the replacement approach.
 
 ```
 
@@ -104,8 +109,11 @@ Again, a newcomer could see where your data is and what naming conventions you a
 ---
 raw_data: where is raw data give location on /data. These are raw fastq files usually. What is in your raw_data folder
    naming_convention: is there a naming convention on these files, like pre-defined prefix or suffix that can give us clues?
-processed_data: where is processed data? These are usually bam or VCF files, or methylation call files, bigwig. What is in your raw_data folder, describe
+processed_data: where is processed data? These are usually bam or VCF files, or methylation call files, bigwig. 
+                What is in your raw_data folder, describe
    naming_convention: is there a naming convention on these files, like pre-defined prefix or suffix that can give us clues?
-tertiary_data: where is the data your scripts produced using processed_data or raw_data. These are intermediate or final tables that are used in subsequent analysis or as supplementary material. Describe in one short sentence what type of files are these.
+tertiary_data: where is the data your scripts produced using processed_data or raw_data. 
+             These are intermediate or final tables that are used in subsequent analysis or as supplementary material.
+             Describe in one short sentence what type of files are these.
    naming_convention: is there a naming convention on these files, like pre-defined prefix or suffix that can give us clues?
 ```
