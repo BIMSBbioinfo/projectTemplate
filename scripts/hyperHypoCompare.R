@@ -20,3 +20,10 @@ mut2wt=read.table("data/diffMeth.ranking.mut2wt.txt",header=T)
 
 
 # get hyper-hypo genes
+# now do something fancy here
+[imagine code lines here]
+
+# get results
+# plot them
+# save as text etc.
+[imagine code lines here]
