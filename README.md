@@ -23,18 +23,21 @@ __presentations/__  → (optional) any presentation done internally or externall
 __any_other_folder/__  → (optional) any other folder that is needed for the organization of the project
 
 ## Coding conventions:
-Workhorse of data analysis projects are scripts/notebooks.
-On the top of the script, 
+Workhorse of data analysis projects are scripts/notebooks. Example https://github.com/BIMSBbioinfo/projectTemplate/blob/main/scripts/hyperHypoCompare.R
+While the sections below might be changing dynamically during the project. It is essential this part is kept up-to-date as much as possible. 
+Especially when a script is producing essential plots or tables that will be needed for the publication or report. 
+
 ### Goal of the script
-start with goal of the script. What is this script doing? . What data does the script take in and what it outputs. While this might be changing dynamically during the project. It is essential this part is kept up-to-date as much as possible. Especially when a script is producing essential plots or tables that will be needed for the publication or report. 
+On the top of the script, start with goal of the script. What is this script doing? . 
+
+### Dependencies
+After this section dependencies must be listed, it does not have to be in comments, you can rather call the libraries you will depend on towards the top of the script. All dependecies should be called on top of the script rather than in locations they are used for the first time. 
 
 ### Input/output summary
 What does the script takes as input use comments and location of the files it takes as input
 What are the outputs of the script? Describe in comments of any naming convetion or location of the output scripts
 If the output is pre-defined you know exactly what you are outputing and where you can declare them here and comment
 
-### Dependencies
-After this section dependencies must be listed, it does not have to be in comments, you can rather call the libraries you will depend on towards the top of the script. All dependecies should be called on top of the script rather than in locations they are used for the first time. 
 
 ### I'm developing an R/python package do I need to follow these convetions? 
 The data analysis project might depend on a python or R package you developed but they have different conventions to follow. For those sub-projects follow the conventions with reproducibility and usability in mind. You still will have to follow the convention laid out here when you are publishing the package or demonstrating it results. The package you develop is very likely to be used in a data analysis setting where it will be part of another project or it will have its own publication, for those tasks you need to use the project structure convetions laid out here. 
