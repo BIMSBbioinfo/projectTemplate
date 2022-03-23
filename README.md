@@ -6,6 +6,8 @@ Ideally whole project folder should be synced to github as private repository. T
 
 The main idea about this whole thing is a newcomer or yourself in 6 months should understand what you have done and what is the status of the project, and can replicate work to some degree. Or replicate work 100% if you also keep up a reproducible software environment with the project. 
 
+We also want to keep this as lean as possible, we can not and shouldn't put all details in READMEs. If we do that the files grow very large or maby and will start to have its own syntax. There is a balance between getting fast results and putting in documentation.
+
 ## suggested project folder structure:
 
 __TODO.md__ -> most important
@@ -127,8 +129,8 @@ Other scripts: Other scripts that are not part of the main workflow, they produc
    runFastQC.sh: script running fastqc called within workflow script exampleScript.sh
    BarplotsForRead.R: script for plotting barplots of read lengths. Could be part of supplementary, currently only needed for sanity check.
    
-unused scripts: unused scripts that are 
-               produced for tasks that are not needed anymore for sure or they explored an idea but wasn't interesting to follow up. 
+unused scripts: unused scripts that are  produced for tasks that are not needed anymore for 
+                sure or they explored an idea but wasn't interesting to follow up. 
    rawReads.R: checking read length distribution, it is not used in the paper. 
                we thought there was something wrong with reads, there wasn't. 
    deepLearn.py: deepLearn the methytlation patterns, this didn't work because there wasn't enough data.
