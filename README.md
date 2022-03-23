@@ -98,6 +98,7 @@ failed ideas: link to presentation or document where you collect the failed idea
                There is usually a figure or a table showing that the idea is failed. 
                Paste that figure/table to the document (google doc or slides). 
                This is very important to keep track number of failed ideas are our KPI. Also we don’t retry them this way.
+               Example and template: https://docs.google.com/presentation/d/1scBtJbgTb26KBKKlosXOl0elbiw3J9fgLIBXuNzPswQ/edit?usp=sharing
 
 draft paper: googledocs link to draft paper. Provide a link or write: no link yet. if there is no link
 
