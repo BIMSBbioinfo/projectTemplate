@@ -2,6 +2,10 @@
 
 The project readmes should reflect the current status of the project. The main purpose of these documents are onboarding new members to on-going or completed projects. While team members are in constant flux it would be impossible to keep track and share the status of projects. A secondary purpose is for ourselves, long lasting projects that have intermittent activity might be hard to keep track. We should be able to see the current status and get back to where we were after 6 months of inactivity on the project. R or Python packages can be part of the project but they have their own conventions and guidelines to follow. This project structure outline here is for data analysis projects. Even if you are developing a software package you will need to have such a project structure for publishing the paper about that software which will invariably include data analysis. 
 
+Ideally whole project folder should be synced to github as private repository. The data folder will likely be too large therfore you can put that to `.gitignore`. Anything else is likely snycable to github. 
+
+The main idea about this whole thing is a newcomer or yourself in 6 months should understand what you have done and what is the status of the project, and can replicate work to some degree. Or replicate work 100% if you also keep up a reproducible software environment with the project. 
+
 ## suggested project folder structure:
 
 __TODO.md__ -> most important
@@ -22,9 +26,10 @@ __presentations/__  → (optional) any presentation done internally or externall
 
 __any_other_folder/__  → (optional) any other folder that is needed for the organization of the project
 
-## Coding conventions:
+## Coding conventions for scripts/notebooks:
 Workhorse of data analysis projects are scripts/notebooks. Example https://github.com/BIMSBbioinfo/projectTemplate/blob/main/scripts/hyperHypoCompare.R
-While the sections below might be changing dynamically during the project. It is essential this part is kept up-to-date as much as possible. 
+
+While the sections below might be changing dynamically during the project for a script. It is essential this part is kept up-to-date as much as possible. 
 Especially when a script is producing essential plots or tables that will be needed for the publication or report. 
 
 ### Goal of the script
@@ -38,6 +43,10 @@ What does the script takes as input use comments and location of the files it ta
 What are the outputs of the script? Describe in comments of any naming convetion or location of the output scripts
 If the output is pre-defined you know exactly what you are outputing and where you can declare them here and comment
 
+### Comments
+Comment your code, likely a master student will look at it. You can avoid exessive commenting if you pick variable names and function names intelligently.
+Some degree of comments will be necessary for understanding your code. It will be very rare that your code is so clear someone can pick up what you are doing
+just by looking at variable and function names. While doing things fast, picking good names for stuff will be secondary priority, speaking from experience. 
 
 ### I'm developing an R/python package do I need to follow these convetions? 
 The data analysis project might depend on a python or R package you developed but they have different conventions to follow. For those sub-projects follow the conventions with reproducibility and usability in mind. You still will have to follow the convention laid out here when you are publishing the package or demonstrating it results. The package you develop is very likely to be used in a data analysis setting where it will be part of another project or it will have its own publication, for those tasks you need to use the project structure convetions laid out here. 
