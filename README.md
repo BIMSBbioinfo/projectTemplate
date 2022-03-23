@@ -6,7 +6,7 @@ Ideally whole project folder should be synced to github as private repository. T
 
 The main idea about this whole thing is a newcomer or yourself in 6 months should understand what you have done and what is the status of the project, and can replicate work to some degree. Or replicate work 100% if you also keep up a reproducible software environment with the project. 
 
-We also want to keep this as lean as possible, we can not and shouldn't put all details in READMEs. If we do that the files grow very large or maby and will start to have its own syntax. There is a balance between getting fast results and putting in documentation.
+We also want to keep this as lean as possible, we can not and shouldn't put all details in READMEs. If we do that the files grow very large or many and will start to have its own syntax. There is a balance between getting fast results and putting in documentation.
 
 ## suggested project folder structure:
 
@@ -47,7 +47,8 @@ If the output is pre-defined you know exactly what you are outputing and where y
 
 ### Comments
 Comment your code, likely a master student will look at it. You can avoid exessive commenting if you pick variable names and function names intelligently.
-Some degree of comments will be necessary for understanding your code. It will be very rare that your code is so clear someone can pick up what you are doing
+Some degree of comments will be necessary for understanding your code at all times. 
+It will be very rare that your code is so clear someone can pick up what you are doing
 just by looking at variable and function names. While doing things fast, picking good names for stuff will be secondary priority, speaking from experience. 
 
 ### I'm developing an R/python package do I need to follow these convetions? 
