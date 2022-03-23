@@ -46,7 +46,7 @@ This contains checklists for tasks, and who is responsible of doing them. These 
 ## What goes in README.project ?
 This is the basic information about your project. Looking at this a newcomer should be able to understand what you are doing and what is the status. 
 
-```
+```YAML
 ---
 Goals: What is the goal(s) of the project? What is this project trying to do? A newcomer has to understand what you wrote here.
 
@@ -72,8 +72,10 @@ failed ideas: link to presentation or document where you collect the failed idea
 draft paper: googledocs link to draft paper. Provide a link or write: no link yet. if there is no link
 
 prerequisite reading:  which previously published papers are relevant for this project? Do not list more than 5.
-   reading1: This paper deals with x,y,z. We have a similar approach here. link to paper
-   reading2: This paper deals with x cells. We also work on x cells for this project. link to paper
+   reading1: This paper deals with x,y,z. We have a similar approach here. 
+      link: link to paper
+   reading2: This paper deals with x cells. We also work on x cells for this project. 
+      link: link to paper
 
 prerequisite skills: What a newcomer needs to know to replicate what you have done and improve it? 
                      Does s/he need to know R, python, snakeMake, any particular packages? 
@@ -81,19 +83,25 @@ prerequisite skills: What a newcomer needs to know to replicate what you have do
 ```
 
 ## What goes in README.scripts ?
-__README.scripts__ contains which scripts are produced and what function/goal do they achieve in the project. The current workflow section has the ordered list of scripts that has to be run sequentially in order to achieve the current state of the project. The state of the project is defined by which figures and tables are needed to show the status of the project. 
+__README.scripts__ contains which scripts are produced and what function/goal do they achieve in the project. The current workflow section has the ordered list of scripts that has to be run sequentially in order to achieve the current state of the project. The state of the project is defined by which figures and tables are needed to show the status of the project.
 
 ```
 ----
-current workflow: describe the sequential workflow of scripts to achieve the current state of the project.
-                  Current state is defined by results, which are usually tables and figures. 
+main workflow: describe the sequential workflow of scripts to achieve the current state of the project.
+                  Current state is defined by results, which are usually tables and figures that will go into a paper or report. 
    exampleScript.sh: This script aligns the reads
    callMeth.R: This script calls methylation and saves it RDS files
    cluster.R: This script clusters samples based on methylation and produces heatmaps 
 
-Other scripts: Other scripts that are not part of the current workflow and they are 
-               produced for tasks that are not needed anymore or checked but wasn't interesting to follow up. 
-               Or if the workflow is orchestrated by a single script than every other script has to be documented here.
+Other scripts: Other scripts that are not part of the main workflow, they produce results that we are not sure that are relevant or things
+              that are still in flux in terms of what to include in a report or paper.
+               In addition, if the part or complete workflow is orchestrated by a single script then every other script in that is called by
+               orchestrator workflow has to be documented here.
+   runFastQC.sh: script running fastqc called within workflow script exampleScript.sh
+   BarplotsForRead.R: script for plotting barplots of read lengths. Could be part of supplementary, currently only needed for sanity check.
+   
+unused scripts: unused scripts that are 
+               produced for tasks that are not needed anymore for sure or they explored an idea but wasn't interesting to follow up. 
    rawReads.R: checking read length distribution, it is not used in the paper. 
                we thought there was something wrong with reads, there wasn't. 
    deepLearn.py: deepLearn the methytlation patterns, this didn't work because there wasn't enough data.
