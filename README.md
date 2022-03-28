@@ -12,11 +12,11 @@ We also want to keep this as lean as possible, we can not and shouldn't put all 
 
 __TODO.md__ -> most important
 
-__README.project__ → most important
+__README.project.md__ → most important
 
-__README.scripts__ → most important 
+__README.scripts.md__ → most important 
 
-__README.data__ → most important 
+__README.data.md__ → most important 
 
 __data/__ → can have other subfolders or linked data, README.data will be our guide to this folder
 
@@ -75,9 +75,9 @@ Example:
 This is the basic information about your project. Looking at this a newcomer should be able to understand what you are doing and what is the status. 
 
 ```Markdown
----
+
 ## Goals: 
-What is the goal(s) of the project? What is this project trying to do? A newcomer has to understand what you wrote here.
+What is the goal(s) of the project? What is this project trying to do? A newcomer has to understand what you wrote here. Be concise. 
 
 ## Current status:
 What is the current status. What is achieved? what is not still working. 
@@ -89,7 +89,7 @@ Who is involved in this project ?
 - **support work**: Who is helping out with ideas, pre-made scripts, know-how or small custom analysis?
 - **supervision**: Who is doing the project management and has the birds-eye view
 
-## presentations & reports: 
+## Presentations & reports: 
 google drive or dropbox-alike link or multiple links or locations of presentations on our servers.
 Each list item starts with document type, then continues with short explanation and a link/location. 
 - **presentation:** initial results and QC for raw data. [ link: location or link ] 
@@ -108,60 +108,90 @@ Example and template for experiments -> https://docs.google.com/presentation/d/1
 You can use the template or make sure you have a concise document that has an easy to understand structure to document your experiments. 
 
 
-## draft paper: 
+## Draft paper: 
 googledocs link to draft paper. Provide a link or write: no link yet. if there is no link
 
-## prerequisite reading:  
+## Prerequisite reading:  
 which previously published papers are relevant for this project? ** Do not list more than 5**.
 - This paper deals with x,y,z. We have a similar approach here. [ link: location or link ] 
 - This paper deals with x cells. We also work on x cells for this project. [ link: location or link ] 
 
-## prerequisite skills:
+
+## Prerequisite skills:
 What a newcomer needs to know to replicate what you have done and improve it? 
 Does s/he need to know R, python, snakeMake, any particular packages? 
 
 ```
 
-## What goes in README.scripts ?
+## What goes in README.scripts.md ?
 __README.scripts__ contains which scripts are produced and what function/goal do they achieve in the project. The current workflow section has the ordered list of scripts that has to be run sequentially in order to achieve the current state of the project. The state of the project is defined by which figures and tables are needed to show the status of the project.
 
 ```Markdown
-----
-main workflow: describe the sequential workflow of scripts to achieve the current state of the project.
-                  Current state is defined by results, which are usually tables and figures that will go into a paper or report. 
-   exampleScript.sh: This script aligns the reads
-   callMeth.R: This script calls methylation and saves it RDS files
-   cluster.R: This script clusters samples based on methylation and produces heatmaps 
+## location
+Where are your scripts? write the location in /data 
+If they are in disprate locations (not in one central "scripts" folder with sub-folders) list them, and ask yourself why arent they all in one folder.
 
-Other scripts: Other scripts that are not part of the main workflow, they produce results that we are not sure that are relevant or things
-              that are still in flux in terms of what to include in a report or paper.
-               In addition, if the part or complete workflow is orchestrated by a single script then every other script in that is called by
-               orchestrator workflow has to be documented here.
-   runFastQC.sh: script running fastqc called within workflow script exampleScript.sh
-   BarplotsForRead.R: script for plotting barplots of read lengths. Could be part of supplementary, currently only needed for sanity check.
+## main workflow: 
+describe the sequential workflow of scripts to achieve the current state of the project.
+Current state is defined by results, which are usually tables and figures that will go into a paper or report. 
+**List the names of the scripts with short explanation of what they do. Example below**
+ - exampleScript.sh: This script aligns the reads
+ - callMeth.R: This script calls methylation and saves it RDS files
+ - cluster.R: This script clusters samples based on methylation and produces heatmaps 
+
+## Other scripts: 
+Other scripts that are not part of the main workflow, they produce results that we are not sure that are relevant or things
+that are still in flux in terms of what to include in a report or paper.
+In addition, if the part or complete workflow is orchestrated by a single script then every other script in that is called by
+orchestrator workflow has to be documented here.
+**List the names of the scripts with short explanation of what they do. Example below**
+  
+ - runFastQC.sh: script running fastqc called within workflow script exampleScript.sh
+ - BarplotsForRead.R: script for plotting barplots of read lengths. Could be part of supplementary, currently only needed for sanity check.
    
-unused scripts: unused scripts that are  produced for tasks that are not needed anymore for 
-                sure or they explored an idea but wasn't interesting to follow up. 
-   rawReads.R: checking read length distribution, it is not used in the paper. 
-               we thought there was something wrong with reads, there wasn't. 
-   deepLearn.py: deepLearn the methytlation patterns, this didn't work because there wasn't enough data.
-               We settled sth simpler later in. xyz script has the replacement approach.
+## unused scripts
+unused scripts that are  produced for tasks that are not needed anymore for 
+sure or they explored an idea but wasn't interesting to follow up. 
+**List the names of the scripts with short explanation of what they do. Example below**
+
+- rawReads.R: checking read length distribution, it is not used in the paper. we thought there was something wrong with reads, there wasn't. 
+- deepLearn.py: deepLearn the methytlation patterns, this didn't work because there wasn't enough data. We settled sth simpler later in. xyz script has the replacement approach.
 
 ```
 
-## What goes in README.data ?
+## What goes in README.data.md ?
 This readme introduces the reader where the data files are and any convention that we can glean from their naming. 
 Again, a newcomer could see where your data is and what naming conventions you are using to figure out where the relevant data is.
 
 ```Markdown
----
-raw_data: where is raw data give location on /data. These are raw fastq files usually. What is in your raw_data folder
-   naming_convention: is there a naming convention on these files, like pre-defined prefix or suffix that can give us clues?
-processed_data: where is processed data? These are usually bam or VCF files, or methylation call files, bigwig. 
-                What is in your raw_data folder, describe
-   naming_convention: is there a naming convention on these files, like pre-defined prefix or suffix that can give us clues?
-tertiary_data: where is the data your scripts produced using processed_data or raw_data. 
-             These are intermediate or final tables that are used in subsequent analysis or as supplementary material.
-             Describe in one short sentence what type of files are these.
-   naming_convention: is there a naming convention on these files, like pre-defined prefix or suffix that can give us clues?
+## Raw data: 
+where is raw data give location on /data. These are raw fastq files usually. What is in your raw_data folder
+Use markdown lists if you have disparate locations, give short explanation for each location
+if needed. 
+
+### Naming convention: 
+is there a naming convention on these files, like pre-defined prefix or suffix that can give us clues?
+if there are different naming convetions for different subfolders list the locations of the sub-folders and explain naming convetion using 
+markdown lists. 
+
+## Processed data: 
+where is processed data? These are usually bam or VCF files, or methylation call files, bigwig. 
+hat is in your raw_data folder, describe. Use markdown lists if you have disparate locations, give short explanation for each location
+if needed. 
+
+### Naming convention: 
+is there a naming convention on these files, like pre-defined prefix or suffix that can give us clues?
+if there are different naming convetions for different subfolders list the locations of the sub-folders and explain naming convetion using 
+markdown lists. 
+
+## Tertiary data: 
+where is the data your scripts produced using processed_data or raw_data. 
+These are intermediate or final tables that are used in subsequent analysis or as supplementary material.
+Describe in one short sentence what type of files are these. Use markdown lists if you have disparate locations, give short explanation for each location
+if needed. 
+
+## Naming convention: 
+is there a naming convention on these files, like pre-defined prefix or suffix that can give us clues?
+if there are different naming convetions for different subfolders list the locations of the sub-folders and explain naming convetion using 
+markdown lists. 
 ```
