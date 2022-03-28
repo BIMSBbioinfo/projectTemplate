@@ -190,7 +190,7 @@ These are intermediate or final tables that are used in subsequent analysis or a
 Describe in one short sentence what type of files are these. Use markdown lists if you have disparate locations, give short explanation for each location
 if needed. 
 
-## Naming convention: 
+### Naming convention: 
 is there a naming convention on these files, like pre-defined prefix or suffix that can give us clues?
 if there are different naming convetions for different subfolders list the locations of the sub-folders and explain naming convetion using 
 markdown lists. 
