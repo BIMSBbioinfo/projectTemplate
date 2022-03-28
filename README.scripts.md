@@ -1,8 +1,8 @@
-## location
+## Location
 Where are your scripts? write the location in /data 
 If they are in disprate locations (not in one central "scripts" folder with sub-folders) list them, and ask yourself why arent they all in one folder.
 
-## main workflow: 
+## Main workflow: 
 describe the sequential workflow of scripts to achieve the current state of the project.
 Current state is defined by results, which are usually tables and figures that will go into a paper or report. 
 **List the names of the scripts with short explanation of what they do. Example below**
@@ -20,7 +20,7 @@ orchestrator workflow has to be documented here.
  - runFastQC.sh: script running fastqc called within workflow script exampleScript.sh
  - BarplotsForRead.R: script for plotting barplots of read lengths. Could be part of supplementary, currently only needed for sanity check.
    
-## unused scripts
+## Unused scripts
 unused scripts that are  produced for tasks that are not needed anymore for 
 sure or they explored an idea but wasn't interesting to follow up. 
 **List the names of the scripts with short explanation of what they do. Example below**
