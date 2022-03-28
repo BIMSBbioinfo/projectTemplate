@@ -71,53 +71,61 @@ Example:
 - [ ] Do this (U:lo, I:lo, E: lo)
 - [ ] Do that (U:lo, I:lo, E: hi)
 
-## What goes in README.project ?
+## What goes in README.project.md ?
 This is the basic information about your project. Looking at this a newcomer should be able to understand what you are doing and what is the status. 
 
-```YAML
+```Markdown
 ---
-Goals: What is the goal(s) of the project? What is this project trying to do? A newcomer has to understand what you wrote here.
+## Goals: 
+What is the goal(s) of the project? What is this project trying to do? A newcomer has to understand what you wrote here.
 
-Current status: What is the current status. What is achieved? what is not still working. 
-                try to keep it to 3-4 sentences. A newcomer has to understand what you wrote here.
+## Current status:
+What is the current status. What is achieved? what is not still working. 
+try to keep it to 3-4 sentences. A newcomer has to understand what you wrote here.
 
-Roles: Who is involved in this project ?
-   main driver: Who is doing the bulk of the analysis work. Writing code, processing data?
-   support work: Who is helping out with ideas, pre-made scripts, know-how or small custom analysis?
-   supervision: Who is doing the project management and has the birds-eye view
+## Roles: 
+Who is involved in this project ?
+- **main driver**: Who is doing the bulk of the analysis work. Writing code, processing data?
+- **support work**: Who is helping out with ideas, pre-made scripts, know-how or small custom analysis?
+- **supervision**: Who is doing the project management and has the birds-eye view
 
-presentations: google drive or dropbox-alike link or multiple links or locations of presentations on our servers
-   presentation: initial results and QC for raw data. 
-      link: location or link
-   presentation: Intermediate results, clustering for samples, initial regression models for x,y,z
-      link: location or link
-   presentation: Presentation that has the story flow and figures of the paper
-      link: location or link
+## presentations & reports: 
+google drive or dropbox-alike link or multiple links or locations of presentations on our servers.
+Each list item starts with document type, then continues with short explanation and a link/location. 
+- **presentation:** initial results and QC for raw data. [ link: location or link ] 
+- **presentation:** Intermediate results, clustering for samples, initial regression models for x,y,z  [ link: location or link ] 
+- **presentation:** Presentation that has the story flow and figures of the paper  [ link: location or link ] 
+- **report:** report on clustering results   [ link: location or link ] 
 
-failed ideas: link to presentation or document where you collect the failed ideas.
-               Failed ideas are avenues/paths you stopped pursuing because it didn’t work. 
-               There is usually a figure or a table showing that the idea is failed. 
-               Paste that figure/table to the document (google doc or slides). 
-               This is very important to keep track number of failed ideas, this is somewhat of a KPI. Also we don’t retry them this way.
-               Example and template-> https://docs.google.com/presentation/d/1scBtJbgTb26KBKKlosXOl0elbiw3J9fgLIBXuNzPswQ/edit?usp=sharing
 
-draft paper: googledocs link to draft paper. Provide a link or write: no link yet. if there is no link
+## Experiments & failed ideas: 
+link to presentation or document where you collect the failed ideas and experiments.
+Failed ideas are avenues/paths you stopped pursuing because it didn’t work. 
+There is usually a figure or a table showing that the idea is failed. 
+Paste that figure/table to the document (google doc or slides). 
+This is very important to keep track number of failed ideas/ experiments, this is somewhat of a KPI. 
+Example and template for experiments -> https://docs.google.com/presentation/d/1scBtJbgTb26KBKKlosXOl0elbiw3J9fgLIBXuNzPswQ/edit?usp=sharing
+You can use the template or make sure you have a concise document that has an easy to understand structure to document your experiments. 
 
-prerequisite reading:  which previously published papers are relevant for this project? Do not list more than 5.
-   reading1: This paper deals with x,y,z. We have a similar approach here. 
-      link: link to paper
-   reading2: This paper deals with x cells. We also work on x cells for this project. 
-      link: link to paper
 
-prerequisite skills: What a newcomer needs to know to replicate what you have done and improve it? 
-                     Does s/he need to know R, python, snakeMake, any particular packages? 
+## draft paper: 
+googledocs link to draft paper. Provide a link or write: no link yet. if there is no link
+
+## prerequisite reading:  
+which previously published papers are relevant for this project? ** Do not list more than 5**.
+- This paper deals with x,y,z. We have a similar approach here. [ link: location or link ] 
+- This paper deals with x cells. We also work on x cells for this project. [ link: location or link ] 
+
+## prerequisite skills:
+What a newcomer needs to know to replicate what you have done and improve it? 
+Does s/he need to know R, python, snakeMake, any particular packages? 
 
 ```
 
 ## What goes in README.scripts ?
 __README.scripts__ contains which scripts are produced and what function/goal do they achieve in the project. The current workflow section has the ordered list of scripts that has to be run sequentially in order to achieve the current state of the project. The state of the project is defined by which figures and tables are needed to show the status of the project.
 
-```YAML
+```Markdown
 ----
 main workflow: describe the sequential workflow of scripts to achieve the current state of the project.
                   Current state is defined by results, which are usually tables and figures that will go into a paper or report. 
@@ -145,7 +153,7 @@ unused scripts: unused scripts that are  produced for tasks that are not needed 
 This readme introduces the reader where the data files are and any convention that we can glean from their naming. 
 Again, a newcomer could see where your data is and what naming conventions you are using to figure out where the relevant data is.
 
-```YAML
+```Markdown
 ---
 raw_data: where is raw data give location on /data. These are raw fastq files usually. What is in your raw_data folder
    naming_convention: is there a naming convention on these files, like pre-defined prefix or suffix that can give us clues?
